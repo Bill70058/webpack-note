@@ -1,6 +1,7 @@
 body {
   background-color: #f2f2f2;
-  .index-font {
-    color: aqua;
-  }
+}
+
+.index-font {
+  color: aqua;
 }
