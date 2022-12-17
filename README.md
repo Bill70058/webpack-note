@@ -2,7 +2,7 @@
  * @Author: bill Lin_k_Bill@163.com
  * @Date: 2022-12-16 15:57:15
  * @LastEditors: bill Lin_k_Bill@163.com
- * @LastEditTime: 2022-12-17 20:30:50
+ * @LastEditTime: 2022-12-17 20:51:49
  * @FilePath: /webpack-note/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -24,3 +24,5 @@
 > 从v2开始就是对大项目打包时会用到的打包配置
 
 - 使用缓存``cache``与代码拆分``splitChunks``提升打包速度，详情配置项及作用可以看[官网](https://webpack.docschina.org/configuration/cache/#root)这部分文档
+- 该demo中使用happypack会有个babel报错，没找到原因，有兴趣需要使用到该插件的可以自行配置试试，顺便提个pr
+- 多线程打包还可以使用``thread-loader``插件
