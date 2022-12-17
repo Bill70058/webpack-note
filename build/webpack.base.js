@@ -2,7 +2,7 @@
  * @Author: bill Lin_k_Bill@163.com
  * @Date: 2022-12-16 15:56:31
  * @LastEditors: bill Lin_k_Bill@163.com
- * @LastEditTime: 2022-12-17 20:08:51
+ * @LastEditTime: 2022-12-17 20:13:54
  * @FilePath: /webpack-demo01/build/webpack.config.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -59,37 +59,42 @@ module.exports = {
   ],
   module: {
     rules: [{
-      test: /\.(jsx|js)$/,
-      use: 'babel-loader',
-      include: path.resolve(rootDir, 'src'),
-      exclude: /node_modules/,
-    }, {
-      test: /\.(le|c)ss$/,
-      exclude: /node_modules/,
-      use: [
-        MiniCssExtractPlugin.loader,
-        {
-          loader: 'css-loader',
-          options: {
-            modules: {
-              auto: true,
-              exportGlobals: true,
-              localIdentName: "[local]__[hash:base64:5]",
+        test: /\.(jsx|js)$/,
+        use: 'babel-loader',
+        include: path.resolve(rootDir, 'src'),
+        exclude: /node_modules/,
+      }, {
+        test: /\.(le|c)ss$/,
+        exclude: /node_modules/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                auto: true,
+                exportGlobals: true,
+                localIdentName: "[local]__[hash:base64:5]",
+              },
             },
           },
-        },
-        'less-loader',
-        {
-          loader: 'postcss-loader',
-          options: {
-            postcssOptions: {
-              plugins: [
-                ["autoprefixer"],
-              ],
+          'less-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  ["autoprefixer"],
+                ],
+              },
             },
-          },
-        }
-      ]
-    }, ]
+          }
+        ]
+      },
+      {
+        test: /\.(png|jpg|gif|jpeg|webp|svg|eot|ttf|woff|woff2)$/,
+        type: 'asset',
+      },
+    ]
   }
 }
