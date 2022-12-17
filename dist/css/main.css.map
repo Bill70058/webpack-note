@@ -1,1 +1,0 @@
-{"version":3,"file":"css/main.css","mappings":"AAAA,KACE,wBACF,CAEA,YACE,UAAF","sources":["webpack://webpack-demo01/./src/index.css"],"sourcesContent":["body {\n  background-color: #f2f2f2;\n}\n\n.index-font {\n  color: aqua;\n}"],"names":[],"sourceRoot":""}
