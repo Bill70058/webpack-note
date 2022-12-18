@@ -2,13 +2,15 @@
  * @Author: bill Lin_k_Bill@163.com
  * @Date: 2022-12-16 15:57:15
  * @LastEditors: bill Lin_k_Bill@163.com
- * @LastEditTime: 2022-12-17 20:51:49
+ * @LastEditTime: 2022-12-18 16:03:27
  * @FilePath: /webpack-note/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 ## 手动通过webpack搭建项目
 
 [参考链接](https://juejin.cn/post/6982361231071903781)
+
+关于[自己实现一个loader与plugin](https://github.com/Bill70058/webpack-loader-and-plugin)
 
 ### 遇到的问题
 - babel插件的引入只需要引入运行时编译部分就够用了，其他按需
